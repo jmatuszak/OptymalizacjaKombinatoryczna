@@ -20,9 +20,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OK1.4", "OK1.4", "{E1E560AD-7B6A-4079-864B-D08C0E2F1812}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OK1.5", "OK1.5", "{4F3FD474-0164-4EDF-AA15-5EA8814D1E6E}"
-	ProjectSection(SolutionItems) = preProject
-		matrix.txt = matrix.txt
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OK1.6", "OK1.6", "{02BD83C3-AC32-4A9A-8375-908E41F3F791}"
 EndProject

@@ -121,7 +121,10 @@ void PrintMatrix(int[,] matrix)
 
 int[,] ReadFromFile()
 {
-    String input = File.ReadAllText(@"C:\Users\Jan\source\repos\OK1.8\OK1.8\matrix.txt");
+    string projectFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\");
+    string inputFilePath = Path.Combine(projectFolderPath, "matrix.txt");
+
+    String input = File.ReadAllText(inputFilePath);
 
     int i = 0, j = 0;
     int[,] result = new int[30, 30];

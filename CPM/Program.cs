@@ -38,7 +38,10 @@ public class MainClass
     public static void Main()
     {
         //string text = Console.ReadLine();
-        string text = File.ReadAllText(@"C:\Users\Jan\source\repos\Optymalizacja Kombinatoryczna\Szeregowanie zadań\Metoda Ścieżki Krytycznej\Metoda Ścieżki Krytycznej\input1.json");
+        string projectFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\");
+        string inputFilePath = Path.Combine(projectFolderPath, "input1.json");
+
+        string text = File.ReadAllText(inputFilePath);
         var graph = JsonConvert.DeserializeObject<GraphData>(text);
 
         var matrix = CreateMatrix(graph);

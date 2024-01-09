@@ -1,9 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿
 //using System.Diagnostics.StopWatch;
 
 public class MainClass
@@ -202,7 +197,10 @@ public class MainClass
         }
         int[,] ReadFromFile(string txt)
         {
-            String input = File.ReadAllText(txt);
+            string projectFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\");
+            string inputFilePath = Path.Combine(projectFolderPath, txt);
+
+            string input = File.ReadAllText(inputFilePath);
             int n = input.Count(x => x == '\n') + 1;
             int i = 0, j = 0;
             int[,] result = new int[n, n];

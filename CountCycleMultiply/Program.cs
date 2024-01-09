@@ -103,7 +103,10 @@ public class MainClass
         }
         int[,] ReadFromFile()
         {
-            String input = File.ReadAllText(@"C:\Users\Jan\source\repos\TestNaiwny\TestNaiwny\matrix.txt");
+            string projectFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\");
+            string inputFilePath = Path.Combine(projectFolderPath, "matrix.txt");
+
+            string input = File.ReadAllText(inputFilePath);
 
             int i = 0, j = 0;
             int[,] result = new int[30, 30];

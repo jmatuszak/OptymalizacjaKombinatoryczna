@@ -204,7 +204,10 @@ public class MainClass
         }
         int[,] ReadFromFile(string txt, int n)
         {
-            String input = File.ReadAllText(txt);
+            string projectFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\");
+            string inputFilePath = Path.Combine(projectFolderPath, txt);
+
+            string input = File.ReadAllText(inputFilePath);
 
             int i = 0, j = 0;
             int[,] result = new int[n, n];

@@ -10,7 +10,7 @@ public class MainClass
         //int[,] matrix1 = new int[,] { { 0, 1, 1 }, { 1, 0, 1 }, { 1, 1, 0 } };
         //int[,] matrix2 = new int[,] { { 0, 1, 0 }, { 1, 0, 1 }, { 0, 1, 0 } };
         //var matrix = ReadMatrix();
-        var matrix1 = ReadFromFile("C:\\Users\\Jan\\Source\\Repos\\OK2.1\\OK2.1\\matrix2.txt", 6);
+        var matrix1 = ReadFromFile("matrix2.txt", 30);
         PrintMatrix(matrix1);
         var result = VertexCoverGreedy(matrix1);
         PrintList(result);
@@ -99,7 +99,10 @@ public class MainClass
         }
         int[,] ReadFromFile(string txt, int n)
         {
-            String input = File.ReadAllText(txt);
+            string projectFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\");
+            string inputFilePath = Path.Combine(projectFolderPath, txt);
+
+            String input = File.ReadAllText(inputFilePath);
 
             int i = 0, j = 0;
             int[,] result = new int[n, n];
